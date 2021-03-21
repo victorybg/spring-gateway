@@ -21,7 +21,6 @@ public class GatewayApplication {
         return builder.routes()
                 .route(p -> p
                         .path("/consumer/**")
-                        .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri("http://localhost:11111"))
                 .route(p -> p
                         .host("www.hystrix.com:9999")
